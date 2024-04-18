@@ -1,166 +1,504 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-them="light" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hockey</title>
-    <!-- Google font install -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/0d75634f0f.js" crossorigin="anonymous"></script>
-    <!-- daisyui install -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hockey</title>
+  <!-- Google font install -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/0d75634f0f.js" crossorigin="anonymous"></script>
+  <!-- daisyui install -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
         }
-    </script>
-    <style>
-        :root {
-            background-color: white;
-        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      background-color: white;
+    }
 
-        .font-manrope {
-            font-family: "Manrope", sans-serif;
-        }
+    .font-manrope {
+      font-family: "Manrope", sans-serif;
+    }
 
-        .radial-progress:after {
-            
-            transform: rotate(calc(var(--value)* 3.6deg - 90deg)) translate(calc(var(--size) / 2 - 50%));
-            background-color: currentColor;
-        }
-    </style>
+    .radial-progress:after {
+
+      transform: rotate(calc(var(--value)* 3.6deg - 90deg)) translate(calc(var(--size) / 2 - 50%));
+      background-color: currentColor;
+    }
+  </style>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="navbar bg-transparent lg:mx-auto mt-12">
-                <div class="navbar-start">
-                    <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </div>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a class="font-manrope font-bold text-base text text-[#FF4240]">Home</a></li>
-                            <li><a class="font-manrope font-normal text-base text-[#424247]">About</a></li>
-                            <li><a class="font-manrope font-normal text-base text-[#424247]">Page</a></li>
-                            <li><a class="font-manrope font-normal text-base text-[#424247]">Blog</a></li>
-                            <li><a class="font-manrope font-normal text-base text-[#424247]">Contact</a></li>
-                        </ul>
-                    </div>
-                    <a class="lg:ml-[135px] font-manrope font-extrabold lg:text-[36px] text-[#131318]">Hockey<span
-                            class="text-[#FF4240]">’</span>s</a>
-                </div>
-                <div class="navbar hidden lg:flex lg:mx-[135px]">
-                    <ul class="menu menu-horizontal  gap-11">
-                        <li><a class="font-manrope font-bold text-base text text-[#FF4240]">Home</a></li>
-                        <li><a class="font-manrope font-normal text-base text-[#424247]">About</a></li>
-                        <li><a class="font-manrope font-normal text-base text-[#424247]">Page</a></li>
-                        <li><a class="font-manrope font-normal text-base text-[#424247]">Blog</a></li>
-                        <li><a class="font-manrope font-normal text-base text-[#424247]">Contact</a></li>
-                    </ul>
-                    <div class="lg:ml-auto lg:mr-[1">
-                        <button class="hidden lg:flex lg:mr-9 text-[#89898B]"><i
-                                class=" fa-solid fa-magnifying-glass  "></i></button>
-                        <button
-                            class="font-bold font-manrope lg:text-xl py-2 l lg:py- px-6  text-white bg-[#FF4240] rounded-lg">Get
-                            Ticket</button>
-                    </div>
-                </div>
-
-
-
+<body class="w-full m-auto">
+  <header class="max-w-[1440px]">
+    <nav class="lg:max-w-[1440px]">
+      <div class="navbar bg-transparent lg:mx-auto mt-12">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
-        </nav>
-        <!-- banner section -->
-        <div class="carousel md:mx-5 lg:mt-14 lg:ml-[135px] lg:mr-[135px] lg:h-[550px]">
-            <div id="slide1" class="carousel-item relative w-full">
-                <img src="Images/1.png" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" class="btn btn-circle">❮</a>
-                    <a href="#slide2" class="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide2" class="carousel-item relative w-full">
-                <img src="Images/4.png" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle">❮</a>
-                    <a href="#slide3" class="btn btn-circle">❯</a>
-                </div>
-            </div>
-
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a class="font-manrope font-bold text-base text text-[#FF4240]">Home</a></li>
+              <li><a class="font-manrope font-normal text-base text-[#424247]">About</a></li>
+              <li><a class="font-manrope font-normal text-base text-[#424247]">Page</a></li>
+              <li><a class="font-manrope font-normal text-base text-[#424247]">Blog</a></li>
+              <li><a class="font-manrope font-normal text-base text-[#424247]">Contact</a></li>
+            </ul>
+          </div>
+          <a class="lg:ml-[135px] font-manrope font-extrabold lg:text-[36px] text-[#131318]">Hockey<span
+              class="text-[#FF4240]">’</span>s</a>
         </div>
-        <div
-            class="bg-black sm:w-[335px] sm::mt-4 sm::mx-5 lg:w-[566px] lg:h-40 lg:p-8 rounded-2xl lg:flex absolute lg:left-[1200px] lg:bottom-56">
-            <div class="text-center lg:text-start">
-                <h2 class=" font-manrope font-extrabold lg:text-2xl text-[#FFFFFF]">Meet all the heroes from the field
-                </h2>
-                <p class="lg:mt-4 font-manrope font-medium text-base text-[#FFFFFF99]">Playing field Hockey is a
-                    popularly played Sport in our Country, <br>
-                    This Game is played on grass,</p>
-            </div>
+        <div class="navbar hidden lg:flex lg:mx-[135px]">
+          <ul class="menu menu-horizontal  ">
+            <li><a class="font-manrope font-bold text-base text text-[#FF4240]">Home</a></li>
+            <li><a class="font-manrope font-normal text-base text-[#424247]">About</a></li>
+            <li><a class="font-manrope font-normal text-base text-[#424247]">Page</a></li>
+            <li><a class="font-manrope font-normal text-base text-[#424247]">Blog</a></li>
+            <li><a class="font-manrope font-normal text-base text-[#424247]">Contact</a></li>
+          </ul>
+          <div class="lg:ml-auto ">
+            <button class="hidden lg:flex text-[#89898B]"><i class=" fa-solid fa-magnifying-glass "></i></button>
+            <button
+              class="font-bold lg:ml-16 font-manrope lg:text-xl py-2 l lg:py- px-6  text-white bg-[#FF4240] rounded-lg">Get
+              Ticket</button>
+          </div>
         </div>
-    </header>
-    <main>
-        <!-- Professional Hockeys Club -->
-        <section class="mt-24 lg:mt-[132px]">
-            <h2 class="text-center font-manrope font-extrabold text-4xl text-[#131318]">Professional Hockeys Club</h2>
-            <p class="text-center mt-4 text-[#13131899] font-manrope font-medium text-base">Hockey is played with a
-                curved stick in the form of the letter ‘J’. The aim here is to move the ball
-                forward to the Goal post with the curved end of the stick and thereby scoring a Goal. <br>
-                The strikers who play this Game are exceptionally skilled at hitting the targets,
-            </p>
-            <div class="grid lg:grid-cols-4 lg:ml-[172px]">
-                <div class="lg:w-[250px] lg:h-[239px]  mt-20">
-                    <div class="radial-progress translate left-16 lg:w-[120px] lg:h-[120px] text-[#FF4240] "
-                        style="--value:87;" role="progressbar">87%</div>
-                    <h5 class="font-manrope font-semibold text-xl text-[#131318] pt-6 text-center">Prayer Facility</h5>
-                    <p class="text-center pt-4">Hockey is ranked as my favorite <br>
-                        Game.</p>
-                </div>
-                <div class="lg:w-[250px] lg:h-[239px] mt-20">
-                    <div class="radial-progress translate left-16 lg:w-[120px] lg:h-[120px] text-[#49D293] "
-                        style="--value:95;" role="progressbar">95%</div>
-                    <h5 class="font-manrope font-semibold text-xl text-[#131318] pt-6 text-center">Experienced Coach</h5>
-                    <p class="text-center pt-4">Hockey is ranked as my favorite <br>
-                        Game.</p>
-                </div>
-                <div class="lg:w-[250px] lg:h-[239px]  mt-20">
-                    <div class="radial-progress translate left-16 lg:w-[120px] lg:h-[120px] text-[#FFB546] "
-                        style="--value:90;" role="progressbar">90%</div>
-                    <h5 class="font-manrope font-semibold text-xl text-[#131318] pt-6 text-center">Senior Player</h5>
-                    <p class="text-center pt-4">Hockey is ranked as my favorite <br>
-                        Game.</p>
-                </div>
-                <div class="lg:w-[250px] lg:h-[239px] mt-20">
-                    <div class="radial-progress translate left-16 lg:w-[120px] lg:h-[120px] text-[#4C8DF1] "
-                        style="--value:80;" role="progressbar">80%</div>
-                    <h5 class="font-manrope font-semibold text-xl text-[#131318] pt-6 text-center">Training Ground</h5>
-                    <p class="text-center pt-4">Hockey is ranked as my favorite <br>
-                        Game.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
 
-    </footer>
+
+
+      </div>
+    </nav>
+    <!-- banner section -->
+    <div class="carousel md:mx-5 lg:mt-14 lg:max-w-[1440px] lg:w-[1170px] lg:ml-[135px] lg:mr-[135px] lg:h-[550px]">
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="Images/1.png" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide4" class="btn btn-circle">❮</a>
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="Images/4.png" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="bg-black lg:h-40 lg:p-8 rounded-2xl lg:w-[530px] lg:flex absolute lg:left-[1000px] lg:bottom-56">
+      <div class="text-center lg:text-start bg-black">
+        <h2 class=" font-manrope font-extrabold lg:text-2xl text-[#FFFFFF] bg-black">Meet all the heroes from the field
+        </h2>
+        <p class="lg:mt-4 font-manrope font-medium text-base text-[#FFFFFF99] bg-black">Playing field Hockey is a
+          popularly played Sport in our Country, <br>
+          This Game is played on grass,</p>
+      </div>
+    </div>
+  </header>
+  <main class="lg:max-w-[1440px] lg:w-[1170px]">
+    <!-- Professional Hockeys Club -->
+    <section class="mt-24 ">
+      <h2 class="lg:pl-[348px] text-center font-manrope font-extrabold text-4xl text-[#131318]">Professional Hockeys Club
+      </h2>
+      <p class="text-center lg:ml-[281px] mt-4 text-[#13131899] font-manrope font-medium text-base">Hockey is played
+        with a
+        curved stick in the form of the letter ‘J’. The aim here is to move the ball
+        forward to the Goal post with the curved end of the stick and thereby scoring a Goal. <br>
+        The strikers who play this Game are exceptionally skilled at hitting the targets,
+      </p>
+      <div class="grid lg:grid-cols-4 lg:ml-[172px] gap-24">
+        <div class="lg:w-[250px] lg:h-[239px] mt-20">
+          <div class="radial-progress translate left-16 lg:w-[120px] lg:h-[120px] text-[#FF4240] " style="--value:87;"
+            role="progressbar">87%</div>
+          <h5 class="font-manrope font-semibold text-xl text-[#131318] pt-6 text-center">Prayer Facility</h5>
+          <p class="text-center pt-4">Hockey is ranked as my favorite <br>
+            Game.</p>
+        </div>
+        <div class="lg:w-[250px] lg:h-[239px]  mt-20">
+          <div class="radial-progress translate left-16 lg:w-[120px] lg:h-[120px] text-[#49D293] " style="--value:95;"
+            role="progressbar">95%</div>
+          <h5 class="font-manrope font-semibold text-xl text-[#131318] pt-6 text-center">Experienced Coach</h5>
+          <p class="text-center pt-4">Hockey is ranked as my favorite <br>
+            Game.</p>
+        </div>
+        <div class="lg:w-[250px] lg:h-[239px] mt-20">
+          <div class="radial-progress translate left-16 lg:w-[120px] lg:h-[120px] text-[#FFB546] " style="--value:90;"
+            role="progressbar">90%</div>
+          <h5 class="font-manrope font-semibold text-xl text-[#131318] pt-6 text-center">Senior Player</h5>
+          <p class="text-center pt-4">Hockey is ranked as my favorite <br>
+            Game.</p>
+        </div>
+        <div class="lg:w-[250px] lg:h-[239px] mt-20">
+          <div class="radial-progress translate left-16 lg:w-[120px] lg:h-[120px] text-[#4C8DF1] " style="--value:80;"
+            role="progressbar">80%</div>
+          <h5 class="font-manrope font-semibold text-xl text-[#131318] pt-6 text-center">Training Ground</h5>
+          <p class="text-center pt-4">Hockey is ranked as my favorite <br>
+            Game.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Program Sections -->
+    <section class="my-[132px]  m-auto ">
+      <div class="">
+        <h2 class="text-center font-manrope font-extrabold text-4xl text-[#131318] lg:pl-[348px]">Program Sections</h2>
+        <p class=" text-center text-[#13131899] text-base font-medium font-manrope lg:pl-[348px] lg:my-6">In this Sport, there are two
+          teams who play against each other and they both try to score by posting the Goal in the Goalpost.</p>
+      </div>
+
+
+      <div class="mt-12 w-3/4 m-auto">
+          <div class=" grid lg:grid-cols-2 grid-cols-1 justify-center gap-6">
+            <div class="card lg:w-[573px] image-full">
+              <figure><img src="Images/2.png" alt="" /></figure>
+              <div class="card-body mt-24">
+                <h2 class="text-[#FFFFFF] font-manrope font-extrabold text-[28px] mt-4">Junior Program</h2>
+                <p>Field Hockey is the National Sport of our Country. The designation of ‘National Sport’</p>
+                <div class="card-actions justify-start mt-9">
+                  <button
+                    class="bg-[#FF4240] lg:py-[10px] lg:px-[22px] rounded-lg text-[#FFFFFF] font-manrope font-bold text-xl">Register
+                    Now!</button>
+                </div>
+              </div>
+            </div>
+            <div class="card lg:w-[573px] lg:ml-32 image-full">
+              <figure><img src="Images/3.png" alt="" class="" /></figure>
+              <div class="card-body mt-24">
+                <h2 class="text-[#ffffff] font-manrope font-extrabold text-[28px] mt-4">Teenager Program</h2>
+                <p class="font-manrope font-medium text-base text-[#FFFFFF] pr-9 ">Field Hockey is the National Sport of
+                  our Country. The designation of ‘National Sport’</p>
+                <div class="card-actions justify-start mt-9">
+                  <button
+                    class="bg-[#FF4240] lg:py-[10px] lg:px-[22px] rounded-lg text-[#FFFFFF] font-manrope font-bold text-xl">Register
+                    Now!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="justify-center mt-6 w-full lg:ml-[150px]">
+            <div class="card shadow-xl image-full">
+              <figure class=""><img src="Images/4.png" alt="" /></figure>
+              <div class="card-body">
+                <h2 class="text-[#ffffff] font-manrope font-extrabold text-[28px] mt-[207px]">Professional Program</h2>
+                <p class="font-manrope font-medium text-base text-[#FFFFFF] pr-9 ">Field Hockey is the National Sport of
+                  our Country. The designation of ‘National Sport’</p>
+                <div class="card-actions justify-start">
+                  <button
+                    class="bg-[#FF4240] lg:py-[10px] lg:px-[22px] rounded-lg text-[#FFFFFF] font-manrope font-bold text-xl">Buy
+                    Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </section>
+    <!-- Our New Products -->
+    <section class="lg:mt-8 lg:w-[1170px] my-[132px]  m-auto">
+      <h2 class="text-center font-manrope font-extrabold text-[36px] text-[#131318] lg:pl-[348px]">Our New Products</h2>
+      <p class="mt-6 text-center text-[#13131899] font-manrope font-medium text-base lg:pl-[348px]">Playing field Hockey is a
+        popularly played Sport in our Country, which <br>
+        is played by forming teams. This Game is played on grass, on artificial or watered turf, <br>
+        or on synthetic fields. The team has ten players in total and a Goalkeeper</p>
+
+
+      <div class="grid lg:grid-cols-2 justify-center lg:ml-[150px] lg:mr-[135px]">
+        <div class="card card-side  shadow-xl lg:w-[560px] lg:mt-20 rounded-2xl">
+          <figure><img src="Images/5.png" class="lg:w-[180px] lg:pl-8 lg:pt-6 lg:pb-6" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2>
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <h6 class="lg:ml-2">5.0</h6>
+                <div class=""><i class="fa-regular fa-eye lg:ml-5"></i></div>
+                <h6 class="lg:ml-2">20</h6><i class="fa-regular fa-heart flex items-center justify-center lg:ml-4">
+                  <h5 class="lg:ml-2">200</h5>
+                </i>
+              </div>
+            </h2>
+            <h2 class="card-title font-manrope font-extrabold text-xl text-[#131318]">World Cup Flags Football</h2>
+            <p class="font-manrope font-medium text-base text-[#13131899]">Hockey is a Sport that requires a lot of
+              practice and dedication.</p>
+            <div class="card-actions justify-start">
+              <h2 class="font-manroep font-extrabold text-[18px] text-[#FF4240]">Price - $22.00</h2>
+              <div class="flex items-center gap-5 text-[#13131880]">
+                <i class="fa-solid fa-cart-shopping lg:ml-5"></i>
+                <h5 class="font-manrope font-medium text-base text-[#13131880]">Delivery Fee : Free</h5>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side shadow-xl lg:ml-[120px] lg:w-[560px] lg:mt-20 rounded-2xl">
+          <figure><img src="Images/6.png" class="lg:w-[180px] lg:pl-8 lg:pt-6 lg:pb-6" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2>
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <h6 class="lg:ml-2">5.0</h6>
+                <div class=""><i class="fa-regular fa-eye lg:ml-5"></i></div>
+                <h6 class="lg:ml-2">20</h6><i class="fa-regular fa-heart flex items-center justify-center lg:ml-4">
+                  <h5 class="lg:ml-2">200</h5>
+                </i>
+              </div>
+            </h2>
+            <h2 class="card-title font-manrope font-extrabold text-xl text-[#131318]">World Cup Flags Football</h2>
+            <p class="font-manrope font-medium text-base text-[#13131899]">Hockey is a Sport that requires a lot of
+              practice and dedication.</p>
+            <div class="card-actions justify-start">
+              <h2 class="font-manroep font-extrabold text-[18px] text-[#FF4240]">Price - $22.00</h2>
+              <div class="flex items-center gap-5 text-[#13131880]">
+                <i class="fa-solid fa-cart-shopping lg:ml-5"></i>
+                <h5 class="font-manrope font-medium text-base text-[#13131880]">Delivery Fee : Free</h5>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side shadow-xl  lg:w-[560px] lg:mt-20 rounded-2xl">
+          <figure><img src="Images/7.png" class="lg:w-[180px] lg:pl-8 lg:pt-6 lg:pb-6" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2>
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <h6 class="lg:ml-2">5.0</h6>
+                <div class=""><i class="fa-regular fa-eye lg:ml-5"></i></div>
+                <h6 class="lg:ml-2">20</h6><i class="fa-regular fa-heart flex items-center justify-center lg:ml-4">
+                  <h5 class="lg:ml-2">200</h5>
+                </i>
+              </div>
+            </h2>
+            <h2 class="card-title font-manrope font-extrabold text-xl text-[#131318]">World Cup Flags Football</h2>
+            <p class="font-manrope font-medium text-base text-[#13131899]">Hockey is a Sport that requires a lot of
+              practice and dedication.</p>
+            <div class="card-actions justify-start">
+              <h2 class="font-manroep font-extrabold text-[18px] text-[#FF4240]">Price - $22.00</h2>
+              <div class="flex items-center gap-5 text-[#13131880]">
+                <i class="fa-solid fa-cart-shopping lg:ml-5"></i>
+                <h5 class="font-manrope font-medium text-base text-[#13131880]">Delivery Fee : Free</h5>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side shadow-xl lg:ml-[120px] lg:w-[560px] lg:mt-20 rounded-2xl">
+          <figure><img src="Images/8.png" class="lg:w-[180px] lg:pl-8 lg:pt-6 lg:pb-6" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2>
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <h6 class="lg:ml-2">5.0</h6>
+                <div class=""><i class="fa-regular fa-eye lg:ml-5"></i></div>
+                <h6 class="lg:ml-2">20</h6><i class="fa-regular fa-heart flex items-center justify-center lg:ml-4">
+                  <h5 class="lg:ml-2">200</h5>
+                </i>
+              </div>
+            </h2>
+            <h2 class="card-title font-manrope font-extrabold text-xl text-[#131318]">World Cup Flags Football</h2>
+            <p class="font-manrope font-medium text-base text-[#13131899]">Hockey is a Sport that requires a lot of
+              practice and dedication.</p>
+            <div class="card-actions justify-start">
+              <h2 class="font-manroep font-extrabold text-[18px] text-[#FF4240]">Price - $22.00</h2>
+              <div class="flex items-center gap-5 text-[#13131880]">
+                <i class="fa-solid fa-cart-shopping lg:ml-5"></i>
+                <h5 class="font-manrope font-medium text-base text-[#13131880]">Delivery Fee : Free</h5>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side shadow-xl lg:w-[560px] lg:mt-20 rounded-2xl">
+          <figure><img src="Images/9.png" class="lg:w-[180px] lg:pl-8 lg:pt-6 lg:pb-6" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2>
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <h6 class="lg:ml-2">5.0</h6>
+                <div class=""><i class="fa-regular fa-eye lg:ml-5"></i></div>
+                <h6 class="lg:ml-2">20</h6><i class="fa-regular fa-heart flex items-center justify-center lg:ml-4">
+                  <h5 class="lg:ml-2">200</h5>
+                </i>
+              </div>
+            </h2>
+            <h2 class="card-title font-manrope font-extrabold text-xl text-[#131318]">World Cup Flags Football</h2>
+            <p class="font-manrope font-medium text-base text-[#13131899]">Hockey is a Sport that requires a lot of
+              practice and dedication.</p>
+            <div class="card-actions justify-start">
+              <h2 class="font-manroep font-extrabold text-[18px] text-[#FF4240]">Price - $22.00</h2>
+              <div class="flex items-center gap-5 text-[#13131880]">
+                <i class="fa-solid fa-cart-shopping lg:ml-5"></i>
+                <h5 class="font-manrope font-medium text-base text-[#13131880]">Delivery Fee : Free</h5>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-side shadow-xl lg:ml-[120px] lg:w-[560px] lg:mt-20 rounded-2xl">
+          <figure><img src="Images/10.png" class="lg:w-[180px] lg:pl-8 lg:pt-6 lg:pb-6" alt="Movie" /></figure>
+          <div class="card-body">
+            <h2>
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <h6 class="lg:ml-2">5.0</h6>
+                <div class=""><i class="fa-regular fa-eye lg:ml-5"></i></div>
+                <h6 class="lg:ml-2">20</h6><i class="fa-regular fa-heart flex items-center justify-center lg:ml-4">
+                  <h5 class="lg:ml-2">200</h5>
+                </i>
+              </div>
+            </h2>
+            <h2 class="card-title font-manrope font-extrabold text-xl text-[#131318]">World Cup Flags Football</h2>
+            <p class="font-manrope font-medium text-base text-[#13131899]">Hockey is a Sport that requires a lot of
+              practice and dedication.</p>
+            <div class="card-actions justify-start">
+              <h2 class="font-manroep font-extrabold text-[18px] text-[#FF4240]">Price - $22.00</h2>
+              <div class="flex items-center gap-5 text-[#13131880]">
+                <i class="fa-solid fa-cart-shopping lg:ml-5"></i>
+                <h5 class="font-manrope font-medium text-base text-[#13131880]">Delivery Fee : Free</h5>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Clients Question -->
+    <section class="my-[132px] lg:ml-[132px] lg:w-[1170px] m-auto">
+       <h1 class="text-center font-manrope font-extrabold text-4xl text-[#131318]">Clients Question</h1>
+       <p class="text-center mt-6">Hockey is considered the national sport of India due to its popularity and outstanding performance. <br>
+         It is an important game.</p>
+
+         <div class="mt-12 flex gap-10 border rounded-2xl">
+          <div class="lg:w-[441px] lg:h-[470px] lg:mt-8 lg:mb-8 lg:ml-8">
+             <img src="Images/11.png" alt="">
+          </div>
+          <div class="gap-6 lg:mt-8">
+            <div class="collapse collapse-plus bg-transparent lg:w-[518px] lg:h-[95px]">
+              <input type="radio" name="my-accordion-3" checked="checked" /> 
+              <div class="collapse-title text-xl font-manrope font-bold text-[#131318]">
+                Click to open this one and close others
+              </div>
+              <div class="collapse-content"> 
+                <p class="font-manrope font-bold text-xl text-[#131318]">Our Equipment</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-transparent lg:w-[518px] lg:mt-6 ">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title font-manrope font-bold text-xl text-[#131318]">
+                Hockey Training
+              </div>
+              <div class="collapse-content"> 
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-transparent lg:w-[518px] lg:mt-6">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title font-manrope font-bold text-xl text-[#131318]">
+                Private Lessons
+              </div>
+              <div class="collapse-content"> 
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-transparent lg:w-[518px]">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title font-manrope font-bold text-xl text-[#131318]">
+                Ski Touring
+              </div>
+              <div class="collapse-content"> 
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-transparent lg:w-[518px]">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title font-manrope font-bold text-xl text-[#131318] lg:h-[51px]">
+                Booking
+              </div>
+              <div class="collapse-content"> 
+                <p>hello</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-transparent lg:w-[518px] ">
+              <input type="radio" name="my-accordion-3" /> 
+              <div class="collapse-title font-manrope font-bold text-xl text-[#131318]">
+                Pricings
+              </div>
+              <div class="collapse-content"> 
+                <p>hello</p>
+              </div>
+            </div>
+          </div>
+         </div>
+    </section>
+    <!-- Get In Touch -->
+    <section class="my-[132px] lg:ml-[132px] lg:w-[1170px] m-auto">
+      <h1 class="text-center font-manrope font-extrabold text-4xl text-[#131318]">Get In Touch</h1>
+      <p class="text-center mt-6 font-manrope font-medium text-base text-[#13131899] lg:mb-12">Hockey is considered the national sport of India due to its popularity and outstanding performance. <br>
+         It is an important game.</p>
+
+
+         <div class="lg:mt-[130px] flex lg:w-[1170px] m-auto gap-6 ">
+          <div class="lg:w-[474px] border rounded-2xl gap-6">
+              <div class="lg:pt-[50px] bg-[#BCED6D1A] lg:w-[374px] lg:h-[216px] rounded-2xl lg:mt-[50px] lg:ml-[50px] lg:mr-[50px]">
+                  <img src="Images/Group 1171275317.png" class="lg:pl-8 lg:mb-6" alt="">
+                  <h5 class="lg:pl-8 font-manrope font-normal text-base text-[#13131866]">Phone Number : </h5>
+                    <p class="lg:pt-4 lg:pl-8 font-manrope font-extrabold text-[18px] text-[#131318]">(+62) 123-321-543</p>
+              </div>
+              <div class="lg:pt-[50px] bg-[#FDDD5F1A] lg:w-[374px] lg:h-[216px] rounded-2xl lg:mt-[50px] lg:ml-[50px]">
+                  <img src="Images/Group 1171275318.png" class="lg:pl-8 lg:mb-6" alt="">
+                  <h5 class="lg:pl-8 font-manrope font-normal text-base text-[#13131866]">Email : </h5>
+                    <p class="lg:pt-4 lg:pl-8 font-manrope font-extrabold text-[18px] text-[#131318]">hockeys@support.com</p>
+              </div>
+              <div class="lg:pt-[50px] bg-[#629CF31A] lg:w-[374px] lg:h-[px] rounded-2xl lg:mt-[50px] lg:ml-[50px] lg:mb-[50px]">
+                  <img src="Images/Group 1171275321.png" class="lg:pl-8 lg:mb-6" alt="">
+                  <h5 class="lg:pl-8 font-manrope font-normal text-base text-[#13131866]">Location :</h5>
+                    <p class="lg:pt-4 lg:pl-8 font-manrope font-extrabold text-[18px] text-[#131318] lg:pb-6">152/1 Mohakhali Wireless Gate</p>
+              </div>
+          </div>
+             <div>
+             <div class="flex gap-6">
+               <div>
+                <h5>Your Name</h5>
+                <input class="bg-slate-200 py-5 lg:pl-5 lg:pr-[157px] lg:mt-4 rounded-xl " type="email" name="" id="" placeholder="Enter your full name">
+                <h5 class="lg:mt-6">Subject</h5>
+                <input class="bg-slate-200 py-5 lg:pl-5 lg:pr-[157px] lg:mt-4 rounded-xl " type="Enter your subject" name="" id="" placeholder="Enter your subject">
+               </div>
+               <div>
+                <h5>Your Name</h5>
+                <input class="bg-slate-200 py-5 lg:pl-5 lg:pr-[157px] lg:mt-4 rounded-xl " type="email" name="" id="" placeholder="Enter your full name">
+                <h5 class="lg:mt-6">Subject</h5>
+                <input class="bg-slate-200 py-5 lg:pl-5 lg:pr-[157px] lg:mt-4 rounded-xl " type="Enter your subject" name="" id="" placeholder="Enter your subject">
+               </div>
+             </div>
+             <div class="lg:mt-6">
+              <h5 class="lg:mb-4">Message</h5>
+                    <textarea class="bg-[#13131808] lg:pt-[21px] lg:pl-5 lg:pr-[480px] lg:pb-[300px] lg:mb-8" name="Write your message" id="Write your message" placeholder="Write your message" cols="30" rows="10"></textarea>
+                    <button class="bg-[#FF4240] text-[#FFFFFF] lg:py-[15px] lg:px-6 box-content lg:w-[690px] p-4 rounded-xl">Send Message</button>
+             </div> 
+         </div>
+         </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
 </body>
 
 </html>
